@@ -65,7 +65,7 @@ function nextSequence() {
 
 // add event listener for button clicking by user
 
-$(".btn").click(function(){
+$(".btn").on("touchstart click", function(){
   let userChosenColour = this.id;
   userClickedPattern.push(userChosenColour);
   playSoundByColor(userChosenColour);
@@ -93,7 +93,7 @@ function checkAnwer(currentLevel){
 let firstStart = true;
 let level = 0;
 $(document).keydown(startNewGame);
-$("#level-title-sm").click(startNewGame);
+$("#level-title-sm").on("touchstart click", NewGame);
 
 function startNewGame(){
   if (firstStart) {
