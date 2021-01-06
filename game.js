@@ -93,7 +93,7 @@ function checkAnwer(currentLevel){
 let firstStart = true;
 let level = 0;
 $(document).keydown(startNewGame);
-$("#level-title-sm").on("touchstart click", NewGame);
+$("#level-title-sm").on("touchstart click", startNewGame);
 
 function startNewGame(){
   if (firstStart) {
